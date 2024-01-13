@@ -7,7 +7,8 @@ import axios from 'axios'
 import Swal from 'sweetalert2'
 
 const schema = yup.object().shape({
-  FullName: yup.string().required('FullName is required'),
+  FirstName: yup.string().required('FirstName is required'),
+  LastName: yup.string().required('LastName is required'),
   email: yup.string().email('Invalid email').required('Email is required'),
   confirmEmail: yup.string().oneOf([yup.ref('email'), null], 'Emails must match').required('Confirm Email is required'),
   password: yup.string().min(9, 'Password must be at least 9 characters').required('Password is required'),
@@ -81,7 +82,10 @@ const HandleEmail = (e)=>{
      <h2>Sign Up</h2>
      </header>
         <div className='Namecontainer'>
-          <label>Full Name:</label>
+          <label>First Name:</label>
+          <input type="text" {...register('FullName')} onChange={HandlFullName} />
+          <p>{errors.FullName?.message}</p>
+          <label>Last Name:</label>
           <input type="text" {...register('FullName')} onChange={HandlFullName} />
           <p>{errors.FullName?.message}</p>
         </div>
@@ -90,11 +94,11 @@ const HandleEmail = (e)=>{
           <input type="text" {...register('email')} onChange={HandleEmail} />
           <p>{errors.email?.message}</p>
         </div>
-        <div className='countrycontainer'>
+        {/* <div className='countrycontainer'>
           <label>Confirm Email:</label>
           <input type="text" {...register('confirmEmail')} />
           <p>{errors.confirmEmail?.message}</p>
-        </div>
+        </div> */}
         <div className='passwordcontainer'>
           <label>Password:</label>
           <input type="password" {...register('password')} onChange={HandlePassword} />
