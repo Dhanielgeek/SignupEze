@@ -611,3 +611,39 @@ option {
   border-radius: 4px;
   cursor: pointer;
 }
+.WelcomeBody{
+  width: 100%;
+  height: 100vh;
+  background: #000814;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.DropWel{
+  width: 50%;
+  height: 50%;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+.DropWel button{
+  width: 60%;
+  height: 30%;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  color: white;
+  background: #007bff;
+  font-size: 19px;
+  animation: backInDown; 
+  animation-duration: 2s;
+}
+.DropWel h4{
+  color: white;
+  font-size: 20px;
+  animation: bounceInRight; 
+  animation-duration: 2s;
+}

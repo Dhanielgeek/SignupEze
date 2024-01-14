@@ -14,7 +14,7 @@
   }
   .Header{
     width: 30%;
-    height: 10%;
+    height: 8%;
     /* background: red; */
     display: flex;
     justify-content: center;
@@ -27,7 +27,7 @@
   }
   .login-form form{
     width: 30%;
-    height: 45%;
+    height: 54%;
     background: #001d3d;
     padding: 0px 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -63,7 +63,7 @@
   .error-message {
     color: red;
     font-size: 14px;
-    margin-top: 5px;
+    /* margin-top: px; */
   }
   
  .LoginBtn{
@@ -91,7 +91,7 @@
  .SignUpContentDownFormPwdEyes {
     position: absolute;
     left: 61%;
-    bottom: 41%;
+    bottom: 46%;
     cursor: pointer;
   }
   
